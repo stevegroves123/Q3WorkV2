@@ -9,10 +9,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var Q3equipment: [equipment] = Bundle.main.decode("eQuipV1.json")
+    @State var textEntry: String = ""
+    @State var showEntry: Bool = false
+    
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            VStack {
+                Text("Equipment No")
+                TextField("Enter the asset_id", text: $textEntry)
+                    .font(.headline)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .frame(minWidth: 0, maxWidth: 350, minHeight: 0, maxHeight: 40, alignment: Alignment.topLeading)
+
+                Spacer()
+                Results(Q3equipment: $Q3equipment, textEntry: $textEntry, showEntry: $showEntry)
+                }
+            }
     }
 }
+        
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

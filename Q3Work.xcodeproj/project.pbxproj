@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F9841B524689CC600FB4824 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9841B424689CC600FB4824 /* Results.swift */; };
+		4FCAC6A82464B67F002F26CD /* equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCAC6A72464B67F002F26CD /* equipment.swift */; };
+		4FCAC6AA2464B747002F26CD /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCAC6A92464B747002F26CD /* Bundle-Decodable.swift */; };
+		4FD0A2F9246AC37500C1FBF3 /* eQuipV1.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FD0A2F8246AC37500C1FBF3 /* eQuipV1.json */; };
 		4FF16A4E24644D8900EA0340 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF16A4D24644D8900EA0340 /* AppDelegate.swift */; };
 		4FF16A5024644D8900EA0340 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF16A4F24644D8900EA0340 /* SceneDelegate.swift */; };
 		4FF16A5324644D8900EA0340 /* Q3Work.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4FF16A5124644D8900EA0340 /* Q3Work.xcdatamodeld */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F9841B424689CC600FB4824 /* Results.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
+		4FCAC6A72464B67F002F26CD /* equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = equipment.swift; sourceTree = "<group>"; };
+		4FCAC6A92464B747002F26CD /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		4FD0A2F8246AC37500C1FBF3 /* eQuipV1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = eQuipV1.json; sourceTree = "<group>"; };
 		4FF16A4A24644D8900EA0340 /* Q3Work.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Q3Work.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FF16A4D24644D8900EA0340 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FF16A4F24644D8900EA0340 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,9 +66,13 @@
 		4FF16A4C24644D8900EA0340 /* Q3Work */ = {
 			isa = PBXGroup;
 			children = (
+				4FD0A2F8246AC37500C1FBF3 /* eQuipV1.json */,
 				4FF16A4D24644D8900EA0340 /* AppDelegate.swift */,
 				4FF16A4F24644D8900EA0340 /* SceneDelegate.swift */,
 				4FF16A5424644D8900EA0340 /* ContentView.swift */,
+				4F9841B424689CC600FB4824 /* Results.swift */,
+				4FCAC6A72464B67F002F26CD /* equipment.swift */,
+				4FCAC6A92464B747002F26CD /* Bundle-Decodable.swift */,
 				4FF16A5624644D8B00EA0340 /* Assets.xcassets */,
 				4FF16A5B24644D8B00EA0340 /* LaunchScreen.storyboard */,
 				4FF16A5E24644D8B00EA0340 /* Info.plist */,
@@ -139,6 +151,7 @@
 				4FF16A5D24644D8B00EA0340 /* LaunchScreen.storyboard in Resources */,
 				4FF16A5A24644D8B00EA0340 /* Preview Assets.xcassets in Resources */,
 				4FF16A5724644D8B00EA0340 /* Assets.xcassets in Resources */,
+				4FD0A2F9246AC37500C1FBF3 /* eQuipV1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,8 +164,11 @@
 			files = (
 				4FF16A4E24644D8900EA0340 /* AppDelegate.swift in Sources */,
 				4FF16A5324644D8900EA0340 /* Q3Work.xcdatamodeld in Sources */,
+				4FCAC6A82464B67F002F26CD /* equipment.swift in Sources */,
+				4F9841B524689CC600FB4824 /* Results.swift in Sources */,
 				4FF16A5524644D8900EA0340 /* ContentView.swift in Sources */,
 				4FF16A5024644D8900EA0340 /* SceneDelegate.swift in Sources */,
+				4FCAC6AA2464B747002F26CD /* Bundle-Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +309,7 @@
 				DEVELOPMENT_TEAM = W6CU3DBQX2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Q3Work/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +317,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Pinnacle.Q3Work;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -313,6 +330,7 @@
 				DEVELOPMENT_TEAM = W6CU3DBQX2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Q3Work/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -320,7 +338,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Pinnacle.Q3Work;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
