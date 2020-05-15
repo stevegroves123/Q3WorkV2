@@ -60,6 +60,7 @@
       "size" : "29x29"
     },
     {
+      "filename" : "q3_58x58.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "29x29"
@@ -70,6 +71,7 @@
       "size" : "40x40"
     },
     {
+      "filename" : "q3_80x80.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "40x40"
@@ -80,6 +82,7 @@
       "size" : "76x76"
     },
     {
+      "filename" : "q3_152x152.png",
       "idiom" : "ipad",
       "scale" : "2x",
       "size" : "76x76"
