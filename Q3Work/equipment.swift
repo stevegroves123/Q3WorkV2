@@ -34,7 +34,7 @@ struct equipment: Codable, Identifiable, Hashable {
     let MaintenanceSupplier: String?
     let LibraryReferenceNo: String?
     let LibraryStatus: String
-    let IsinLibrary: Bool?
+    let IsinLibrary: Bool
     
     enum CodingKeys: String, CodingKey {
         case EquipmentNo
