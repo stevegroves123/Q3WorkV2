@@ -20,11 +20,10 @@ struct ContentView: View {
                 TextField("Enter the asset_id", text: $textEntry)
                     .font(.headline)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(minWidth: 0, maxWidth: 350, minHeight: 0, maxHeight: 40, alignment: Alignment.topLeading)
-
+                    .frame(minWidth: 0, maxWidth: 300, minHeight: 0, maxHeight: 35, alignment: Alignment.topLeading)
                 Spacer()
                 Results(Q3equipment: $Q3equipment, textEntry: $textEntry, showEntry: $showEntry)
-                }
+            }
             }
     }
 }

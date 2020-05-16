@@ -29,7 +29,7 @@ struct Results: View {
                     if self.showEntry == true {
                         List (Q3equipment.filter({textEntry.isEmpty ? true : $0.EquipmentNo.description.contains(textEntry) })){q3equip in
                             VStack (alignment: .leading, spacing: 8) {
-                                VStack (alignment: .leading, spacing: 8) {
+                                Group {
                                     Text("Equipment No: \(q3equip.EquipmentNo.description)").font(.title)
                                     Text("Team: \(q3equip.Team ?? "none")")
                                     Text("Serial No: \(q3equip.SerialNo ?? "none")")
@@ -41,7 +41,7 @@ struct Results: View {
                                     Text("Location: \(q3equip.Location ?? "none")")
                                     Text("Status: \(q3equip.Status ?? "none")")
                                 }
-                                VStack (alignment: .leading, spacing: 8) {
+                                Group {
                                     Text("Technician: \(q3equip.Technician ?? "none")")
                                     Text("Last PPM: \(q3equip.LastPPMDate ?? "none")")
                                     Text("Next PPM Date: \(q3equip.NextPPMDate ?? "none")").font(.headline)
@@ -64,7 +64,7 @@ struct Results: View {
 /*
 struct Results_Previews: PreviewProvider {
     static var previews: some View {
-        Results(Q3equipment: Binding<[equipment]>, textEntry: .constant("none"), showEntry: .constant(false))
+        Results(Q3equipment: .constant([equipment]), textEntry: .constant("none"), showEntry: .constant(false))
     }
 }
 */

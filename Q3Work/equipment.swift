@@ -38,7 +38,7 @@ struct equipment: Codable, Identifiable, Hashable {
     
     enum CodingKeys: String, CodingKey {
         case EquipmentNo
-        case SerialNo = ""
+        case SerialNo
         case Brand
         case Model
         case ModelDescription = "Model Description"
