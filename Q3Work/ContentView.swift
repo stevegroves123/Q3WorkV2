@@ -15,16 +15,25 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            VStack {
+            HStack {
                 Text("Equipment No")
-                TextField("Enter the asset_id", text: $textEntry)
+                TextField("Enter the id No.", text: $textEntry)
                     .font(.headline)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(minWidth: 0, maxWidth: 300, minHeight: 0, maxHeight: 35, alignment: Alignment.topLeading)
-                Spacer()
-                Results(Q3equipment: $Q3equipment, textEntry: $textEntry, showEntry: $showEntry)
+                    .frame(minWidth: 0, maxWidth: 175, minHeight: 0, maxHeight: 35, alignment: Alignment.topLeading)
+                Button(action: {
+                    self.showEntry.toggle()
+                    if self.showEntry == false {
+                        self.textEntry = ""}}) {
+                    if showEntry == true {
+                        Text("Clear")}
+                    else {
+                        Text("Search")}
+                    }
             }
-            }
+            Spacer()
+            Results(Q3equipment: $Q3equipment, textEntry: $textEntry, showEntry: $showEntry)
+        }
     }
 }
         
