@@ -10,37 +10,74 @@ import SwiftUI
 
 struct ContentView: View {
     @State var Q3equipment: [equipment] = Bundle.main.decode("eQuipV1.json")
-    @State var textEntry: String = ""
-    @State var showEntry: Bool = false
+    
+    @State var showEntryEquip: Bool = false
+    @State var showEntryLocation: Bool = false
+    @State var showEntryTeam: Bool = false
+    
+    @State var location: String = ""
+    @State var equipNo: String = ""
+    @State var team: String = ""
     
     var body: some View {
-        VStack {
-            HStack {
-                Text("Equipment No")
-                TextField("Enter the id No.", text: $textEntry, onCommit: {self.showEntry.toggle()})
-                    .font(.headline)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .frame(minWidth: 0, maxWidth: 175, minHeight: 0, maxHeight: 35, alignment: Alignment.topLeading)
-                Button(action: {
-                    self.showEntry.toggle()
-                    if self.showEntry == false {
-                        self.textEntry = ""}
-                }){
-                    if showEntry == true {
-                        Image(systemName: "delete.left").font(.system(size: 24))
-                    } else {
-                        Text("")}
+        NavigationView {
+            VStack {
+                VStack (alignment: .center) {
+//                    equipment
+                    NavigationLink (destination:equipScreen(Q3equipment: $Q3equipment, equipNo: $equipNo, showEntryEquip: $showEntryEquip)) {
+                        Text("Equipment No")
+                            .font(.title)
+                            .foregroundColor(Color.primary)
+                    }
+                        .frame(width: 250, height: 60, alignment: .center)
+                        .background(Color.orange)
+                        .cornerRadius(15)
+                        .padding(.vertical)
+//                    location
+                    NavigationLink (destination: locationScreen(Q3equipment: $Q3equipment, location: $location, showEntryLocation: $showEntryLocation)) {
+                        Text("Location")
+                            .font(.title)
+                            .foregroundColor(Color.primary)
+                    }
+                        .frame(width: 250, height: 60, alignment: .center)
+                        .background(Color.green)
+                        .cornerRadius(15)
+//                    team
+                    NavigationLink (destination: teamScreen(Q3equipment: $Q3equipment, team: $team, showEntryTeam: $showEntryTeam)) {
+                        Text("Team")
+                            .font(.title)
+                            .foregroundColor(Color.primary)
+                    }
+                        .frame(width: 250, height: 60, alignment: .center)
+                        .background(Color.yellow)
+                        .cornerRadius(15)
+                        .padding(.vertical)
+                    Spacer()
+                    VStack {
+                        Text("Pinnacle Solutions")
+                            .font(.title)
+                            .padding(.leading)
+                            .colorInvert()
+                        Text("Equipment Management System")
+                            .font(.headline)
+                            .colorInvert()
+                        Text("(EMS)")
+                            .font(.headline)
+                            .colorInvert()
+                    }
+                    .frame(width: 300, height: 100, alignment: .center)
+                        .background(Color.secondary)
+                        .cornerRadius(15)
+                        .padding()
                 }
             }
-            Spacer()
-            Results(Q3equipment: $Q3equipment, textEntry: $textEntry, showEntry: $showEntry)
         }
     }
 }
-        
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+
