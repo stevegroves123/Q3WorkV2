@@ -33,7 +33,7 @@ struct Results: View {
                             }
                         Group {
                             if q3equip.OwnershipType != "*OBSOLETE" {
-                                Text("Active Status: \(q3equip.OwnershipType ?? "none")").foregroundColor(.black)
+                                Text("Active Status: \(q3equip.OwnershipType ?? "none")").foregroundColor(.primary)
                             } else {
                                 Text("Active Status: \(q3equip.OwnershipType ?? "none")").foregroundColor(.red)
                             }
@@ -43,9 +43,9 @@ struct Results: View {
                             Text("Last Missed PPM: \(q3equip.LastMissedPPMDate ?? "none")")
                             Text("Last Repair Date: \(q3equip.LastRepairDate ?? "none")")
                             if q3equip.IsinLibrary == true {
-                                Text("Libray item: Yes")
+                                Text("Library item: Yes")
                             } else {
-                                Text("Libray item: No")
+                                Text("Library item: No")
                             }
                         }
                     }

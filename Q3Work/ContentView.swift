@@ -17,19 +17,20 @@ struct ContentView: View {
         VStack {
             HStack {
                 Text("Equipment No")
-                TextField("Enter the id No.", text: $textEntry)
+                TextField("Enter the id No.", text: $textEntry, onCommit: {self.showEntry.toggle()})
                     .font(.headline)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .frame(minWidth: 0, maxWidth: 175, minHeight: 0, maxHeight: 35, alignment: Alignment.topLeading)
                 Button(action: {
                     self.showEntry.toggle()
                     if self.showEntry == false {
-                        self.textEntry = ""}}) {
+                        self.textEntry = ""}
+                }){
                     if showEntry == true {
-                        Text("Clear")}
-                    else {
-                        Text("Search")}
-                    }
+                        Image(systemName: "delete.left").font(.system(size: 24))
+                    } else {
+                        Text("")}
+                }
             }
             Spacer()
             Results(Q3equipment: $Q3equipment, textEntry: $textEntry, showEntry: $showEntry)
