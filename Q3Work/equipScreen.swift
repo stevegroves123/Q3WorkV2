@@ -16,25 +16,28 @@ struct equipScreen: View {
     var body: some View {
         VStack {
             HStack {
-                       Text("Equipment No")
-                       TextField("Enter equipment id", text: $equipNo, onCommit: {self.showEntryEquip.toggle()})
-                           .font(.headline)
-                           .textFieldStyle(RoundedBorderTextFieldStyle())
-                           .frame(minWidth: 0, maxWidth: 175, minHeight: 0, maxHeight: 35, alignment: Alignment.topLeading)
-                       Button(action: {
-                           self.showEntryEquip.toggle()
-                           if self.showEntryEquip == false {
-                               self.equipNo = ""}
-                       }){
-                           if showEntryEquip == true {
-                               Image(systemName: "delete.left").font(.system(size: 24))
-                           } else {
-                               Text("")}
-                       }
-                   }
-                Spacer()
+                Text("Equipment No")
+                TextField("Enter equipment id", text: $equipNo, onCommit: {self.showEntryEquip.toggle()})
+                    .font(.headline)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .frame(minWidth: 0, maxWidth: 175, minHeight: 0, maxHeight: 35, alignment: Alignment.topLeading)
+               Button(action: {
+                   self.showEntryEquip.toggle()
+                   if self.showEntryEquip == false {
+                       self.equipNo = ""}
+               }){
+                   if showEntryEquip == true {
+                       Image(systemName: "delete.left").font(.system(size: 24))
+                   } else {
+                       Text("")}
+                }
+            }
+                .padding()
+                .background(Color.orange)
+                .cornerRadius(15)
+            Spacer()
             equipNoResults(Q3equipment: $Q3equipment, showEntry: $showEntryEquip, equipNo: $equipNo)
-               }
+            }
     }
 }
 /*

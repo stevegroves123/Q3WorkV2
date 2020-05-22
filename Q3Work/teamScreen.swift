@@ -20,6 +20,7 @@ struct teamScreen: View {
                            TextField("Enter team  e.g. Q3", text: $team, onCommit: {self.showEntryTeam.toggle()})
                                .font(.headline)
                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                               .disableAutocorrection(true)
                                .frame(minWidth: 0, maxWidth: 175, minHeight: 0, maxHeight: 35, alignment: Alignment.topLeading)
                            Button(action: {
                                self.showEntryTeam.toggle()
@@ -32,9 +33,12 @@ struct teamScreen: View {
                                    Text("")}
                            }
                        }
-                    Spacer()
-                    teamResults(Q3equipment: $Q3equipment, showEntry: $showEntryTeam, team: $team)
-                   }
+                .padding()
+                .background(Color.yellow)
+                .cornerRadius(15)
+                Spacer()
+                teamResults(Q3equipment: $Q3equipment, showEntry: $showEntryTeam, team: $team)
+               }
         }
     }
 /*

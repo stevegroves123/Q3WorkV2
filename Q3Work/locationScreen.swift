@@ -18,9 +18,11 @@ struct locationScreen: View {
                 HStack {
                            Text("Location")
                            TextField("Enter location", text: $location, onCommit: {self.showEntryLocation.toggle()})
-                               .font(.headline)
-                               .textFieldStyle(RoundedBorderTextFieldStyle())
-                               .frame(minWidth: 0, maxWidth: 175, minHeight: 0, maxHeight: 35, alignment: Alignment.topLeading)
+                                .font(.headline)
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                                .disableAutocorrection(true)
+                                .frame(minWidth: 0, maxWidth: 175, minHeight: 0, maxHeight: 35, alignment: Alignment.topLeading)
+                            
                            Button(action: {
                                self.showEntryLocation.toggle()
                             if self.showEntryLocation == false {
@@ -32,9 +34,12 @@ struct locationScreen: View {
                                    Text("")}
                            }
                        }
-                    Spacer()
+                .padding()
+                .background(Color.green)
+                .cornerRadius(15)
+                Spacer()
                 locationResults(Q3equipment: $Q3equipment, showEntry: $showEntryLocation, location: $location)
-                   }
+                }
         }
     }
 /*
