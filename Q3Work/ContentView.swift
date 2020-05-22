@@ -12,11 +12,13 @@ struct ContentView: View {
     @State var Q3equipment: [equipment] = Bundle.main.decode("eQuipV1.json")
     
     @State var showEntryEquip: Bool = false
+    @State var showEntrySerial: Bool = false
     @State var showEntryLocation: Bool = false
     @State var showEntryTeam: Bool = false
-    
-    @State var location: String = ""
+
     @State var equipNo: String = ""
+    @State var serial: String = ""
+    @State var location: String = ""
     @State var team: String = ""
     
     var body: some View {
@@ -33,6 +35,16 @@ struct ContentView: View {
                         .background(Color.orange)
                         .cornerRadius(15)
                         .padding(.vertical)
+//                    serial number
+                    NavigationLink (destination: serialNoScreen(Q3equipment: $Q3equipment, serial: $serial, showEntrySerial: $showEntrySerial)) {
+                        Text("Serial No")
+                            .font(.title)
+                            .foregroundColor(Color.primary)
+                    }
+                        .frame(width: 250, height: 60, alignment: .center)
+                        .background(Color.blue)
+                        .cornerRadius(15)
+                        .padding(.vertical)
 //                    location
                     NavigationLink (destination: locationScreen(Q3equipment: $Q3equipment, location: $location, showEntryLocation: $showEntryLocation)) {
                         Text("Location")
@@ -42,6 +54,7 @@ struct ContentView: View {
                         .frame(width: 250, height: 60, alignment: .center)
                         .background(Color.green)
                         .cornerRadius(15)
+                    .padding(.vertical)
 //                    team
                     NavigationLink (destination: teamScreen(Q3equipment: $Q3equipment, team: $team, showEntryTeam: $showEntryTeam)) {
                         Text("Team")
@@ -53,6 +66,7 @@ struct ContentView: View {
                         .cornerRadius(15)
                         .padding(.vertical)
                     Spacer()
+//                    advert
                     VStack {
                         Text("Pinnacle Solutions")
                             .font(.title)

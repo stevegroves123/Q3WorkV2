@@ -16,7 +16,7 @@ struct equipScreen: View {
     var body: some View {
         VStack {
             HStack {
-                Text("Equipment No")
+                Text("Equipment No").font(.headline)
                 TextField("Enter equipment id", text: $equipNo, onCommit: {self.showEntryEquip.toggle()})
                     .font(.headline)
                     .textFieldStyle(RoundedBorderTextFieldStyle())

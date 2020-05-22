@@ -16,7 +16,7 @@ struct teamScreen: View {
         var body: some View {
             VStack {
                 HStack {
-                           Text("Team")
+                           Text("Team").font(.headline)
                            TextField("Enter team  e.g. Q3", text: $team, onCommit: {self.showEntryTeam.toggle()})
                                .font(.headline)
                                .textFieldStyle(RoundedBorderTextFieldStyle())
