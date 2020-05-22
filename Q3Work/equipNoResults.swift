@@ -5,7 +5,6 @@
 //  Created by steve groves on 21/05/2020.
 //  Copyright © 2020 steve groves. All rights reserved.
 //
-
 import SwiftUI
 
 struct equipNoResults: View {

@@ -13,9 +13,9 @@
 		4FB3C8C22477220700AF7A9F /* teamScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB3C8C12477220700AF7A9F /* teamScreen.swift */; };
 		4FB3C8C42477221C00AF7A9F /* locationScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB3C8C32477221C00AF7A9F /* locationScreen.swift */; };
 		4FB3C8C62477223000AF7A9F /* equipScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB3C8C52477223000AF7A9F /* equipScreen.swift */; };
-		4FB3C8C82477224100AF7A9F /* equipNoResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB3C8C72477224100AF7A9F /* equipNoResults.swift */; };
 		4FB3C8CA2478124500AF7A9F /* serialNoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB3C8C92478124500AF7A9F /* serialNoScreen.swift */; };
 		4FB3C8CC2478129100AF7A9F /* serialResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB3C8CB2478129100AF7A9F /* serialResults.swift */; };
+		4FB3C8CE2478345D00AF7A9F /* equipNoResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FB3C8CD2478345D00AF7A9F /* equipNoResults.swift */; };
 		4FCAC6A82464B67F002F26CD /* equipment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCAC6A72464B67F002F26CD /* equipment.swift */; };
 		4FCAC6AA2464B747002F26CD /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FCAC6A92464B747002F26CD /* Bundle-Decodable.swift */; };
 		4FD0A2F9246AC37500C1FBF3 /* eQuipV1.json in Resources */ = {isa = PBXBuildFile; fileRef = 4FD0A2F8246AC37500C1FBF3 /* eQuipV1.json */; };
@@ -35,9 +35,9 @@
 		4FB3C8C12477220700AF7A9F /* teamScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = teamScreen.swift; sourceTree = "<group>"; };
 		4FB3C8C32477221C00AF7A9F /* locationScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = locationScreen.swift; sourceTree = "<group>"; };
 		4FB3C8C52477223000AF7A9F /* equipScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = equipScreen.swift; sourceTree = "<group>"; };
-		4FB3C8C72477224100AF7A9F /* equipNoResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = equipNoResults.swift; path = ../../TextFieldText/TextFieldText/equipNoResults.swift; sourceTree = "<group>"; };
 		4FB3C8C92478124500AF7A9F /* serialNoScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = serialNoScreen.swift; sourceTree = "<group>"; };
 		4FB3C8CB2478129100AF7A9F /* serialResults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = serialResults.swift; sourceTree = "<group>"; };
+		4FB3C8CD2478345D00AF7A9F /* equipNoResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = equipNoResults.swift; sourceTree = "<group>"; };
 		4FCAC6A72464B67F002F26CD /* equipment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = equipment.swift; sourceTree = "<group>"; };
 		4FCAC6A92464B747002F26CD /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
 		4FD0A2F8246AC37500C1FBF3 /* eQuipV1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = eQuipV1.json; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 				4FF16A4F24644D8900EA0340 /* SceneDelegate.swift */,
 				4FF16A5424644D8900EA0340 /* ContentView.swift */,
 				4FB3C8C52477223000AF7A9F /* equipScreen.swift */,
-				4FB3C8C72477224100AF7A9F /* equipNoResults.swift */,
+				4FB3C8CD2478345D00AF7A9F /* equipNoResults.swift */,
 				4FB3C8C92478124500AF7A9F /* serialNoScreen.swift */,
 				4FB3C8CB2478129100AF7A9F /* serialResults.swift */,
 				4FB3C8C32477221C00AF7A9F /* locationScreen.swift */,
@@ -189,7 +189,7 @@
 			files = (
 				4FB3C8C62477223000AF7A9F /* equipScreen.swift in Sources */,
 				4FF16A4E24644D8900EA0340 /* AppDelegate.swift in Sources */,
-				4FB3C8C82477224100AF7A9F /* equipNoResults.swift in Sources */,
+				4FB3C8CE2478345D00AF7A9F /* equipNoResults.swift in Sources */,
 				4FF16A5324644D8900EA0340 /* Q3Work.xcdatamodeld in Sources */,
 				4FCAC6A82464B67F002F26CD /* equipment.swift in Sources */,
 				4FF16A5524644D8900EA0340 /* ContentView.swift in Sources */,
