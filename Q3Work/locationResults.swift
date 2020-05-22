@@ -17,7 +17,7 @@ struct locationResults: View {
             VStack {
                 if self.showEntry == true {
                     VStack {
-                        List (Q3equipment.filter({location.isEmpty ? true : $0.Location!.contains(location) })) {q3equip in
+                        List (Q3equipment.filter({location.isEmpty ? true : $0.Location!.contains(location.uppercased()) })) {q3equip in
                             VStack (alignment: .leading, spacing: 8) {
                                 Group {
                                     Text("Equipment No: \(q3equip.EquipmentNo.description)").font(.title)

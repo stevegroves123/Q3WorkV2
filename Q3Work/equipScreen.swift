@@ -20,6 +20,7 @@ struct equipScreen: View {
                 TextField("Enter equipment id", text: $equipNo, onCommit: {self.showEntryEquip.toggle()})
                     .font(.headline)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .keyboardType(.numbersAndPunctuation)
                     .frame(minWidth: 0, maxWidth: 175, minHeight: 0, maxHeight: 35, alignment: Alignment.topLeading)
                Button(action: {
                    self.showEntryEquip.toggle()

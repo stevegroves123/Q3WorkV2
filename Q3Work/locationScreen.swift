@@ -17,7 +17,7 @@ struct locationScreen: View {
             VStack {
                 HStack {
                            Text("Location")
-                           TextField("Enter location", text: $location, onCommit: {self.showEntryLocation.toggle()})
+                    TextField("Enter location", text: $location, onCommit: {self.showEntryLocation.toggle()})
                                 .font(.headline)
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                                 .disableAutocorrection(true)
