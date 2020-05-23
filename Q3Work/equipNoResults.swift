@@ -16,7 +16,7 @@ struct equipNoResults: View {
         VStack {
             if self.showEntry == true {
                 VStack {
-                    List (Q3equipment.filter({equipNo.isEmpty ? true : $0.EquipmentNo.description.contains(equipNo) })) {q3equip in
+                    List (Q3equipment.filter({equipNo.isEmpty ? true : $0.EquipmentNo.description.contains(equipNo)} )) {q3equip in
                         VStack (alignment: .leading, spacing: 8) {
                             Group {
                                 Text("Equipment No: \(q3equip.EquipmentNo.description)").font(.title)

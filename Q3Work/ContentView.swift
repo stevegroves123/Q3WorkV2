@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var Q3equipment: [equipment] = Bundle.main.decode("eQuipV1.json")
+    @State var Q3equipment = Bundle.main.decode("eQuipV1.json")
     
     @State var showEntryEquip: Bool = false
     @State var showEntrySerial: Bool = false
