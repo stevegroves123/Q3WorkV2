@@ -18,7 +18,7 @@ struct locationResults: View {
                 if self.showEntry == true {
                     VStack {
                         List (Q3equipment.filter({location.isEmpty ? true : $0.Location!.contains(location.uppercased()) })) {q3equip in
-                            VStack (alignment: .leading, spacing: 8) {
+                            NavigationLink(destination: VStack(alignment: .leading, spacing: 10) {
                                 Group {
                                     Text("Equipment No: \(q3equip.EquipmentNo.description)").font(.title)
                                     Text("Team: \(q3equip.Team ?? "none")")
@@ -48,13 +48,15 @@ struct locationResults: View {
                                         Text("Library item: No")
                                     }
                                 }
+                            }) {
+                                Text("\(q3equip.EquipmentNo.description), \(q3equip.Team ?? "none"), \(q3equip.NextPPMDate ?? "none")").font(.subheadline)
                             }
                         }
                     }
                 }
             }
+        }
     }
-}
 /*
 struct locationResults_Previews: PreviewProvider {
     static var previews: some View {

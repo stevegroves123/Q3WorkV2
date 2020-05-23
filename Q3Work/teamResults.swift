@@ -18,7 +18,7 @@ struct teamResults: View {
             if self.showEntry == true {
                 VStack {
                     List (Q3equipment.filter({team.isEmpty ? true : $0.Team!.contains(team.uppercased()) })) {q3equip in
-                        VStack (alignment: .leading, spacing: 8) {
+                        NavigationLink(destination: VStack(alignment: .leading, spacing: 10) {
                             Group {
                                 Text("Equipment No: \(q3equip.EquipmentNo.description)").font(.title)
                                 Text("Team: \(q3equip.Team ?? "none")")
@@ -48,6 +48,8 @@ struct teamResults: View {
                                     Text("Library item: No")
                                 }
                             }
+                        }) {
+                            Text("\(q3equip.EquipmentNo.description), \(q3equip.Model ?? "none"), \(q3equip.NextPPMDate ?? "none")").font(.subheadline)
                         }
                     }
                 }
