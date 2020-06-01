@@ -37,31 +37,31 @@ struct equipment: Codable, Identifiable, Hashable {
     let IsinLibrary: Bool
     
     enum CodingKeys: String, CodingKey {
-        case EquipmentNo
-        case SerialNo
+        case EquipmentNo = "Equipment No"
+        case SerialNo = "Serial No"
         case Brand
         case Model
         case ModelDescription = "Model Description"
         case Category
         case Site
         case Location
-        case LocationText
+        case LocationText = "Location Text"
         case Provider
         case Service
         case Status
         case Team
         case Technician
-        case LastRepairDate
-        case LastPPMDate
-        case LastMissedPPMDate
-        case NextPPMDate
-        case JobPriority
-        case InstallationDate
-        case OwnershipType
-        case MaintenanceSupplier
-        case LibraryReferenceNo
-        case LibraryStatus
-        case IsinLibrary
+        case LastRepairDate = "Last Repair Date"
+        case LastPPMDate = "Last PPM Date"
+        case LastMissedPPMDate = "Last Missed PPM Date"
+        case NextPPMDate = "Next PPM Date"
+        case JobPriority = "Job Priority"
+        case InstallationDate = "Installation Date"
+        case OwnershipType = "Ownership Type"
+        case MaintenanceSupplier = "Maintenance Supplier"
+        case LibraryReferenceNo = "Library Reference No"
+        case LibraryStatus = "Library Status"
+        case IsinLibrary = "Is in Library"
     }
 }
 
