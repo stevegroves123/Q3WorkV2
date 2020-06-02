@@ -15,11 +15,13 @@ struct ContentView: View {
     @State var showEntrySerial: Bool = false
     @State var showEntryLocation: Bool = false
     @State var showEntryTeam: Bool = false
+    @State var showEntryModel: Bool = false
 
     @State var equipNo: String = ""
     @State var serial: String = ""
     @State var location: String = ""
     @State var team: String = ""
+    @State var model: String = ""
     
     var body: some View {
         NavigationView {
@@ -45,6 +47,17 @@ struct ContentView: View {
                         .background(Color.blue)
                         .cornerRadius(15)
                         .padding(.vertical)
+//                    model
+                    NavigationLink (destination: modelScreen(Q3equipment: $Q3equipment, model: $model, showEntryModel: $showEntryModel)) {
+                        Text("Model")
+                            .font(.title)
+                            .foregroundColor(Color.primary)
+                    }
+                        .frame(width: 250, height: 60, alignment: .center)
+                        .background(Color.red)
+                        .cornerRadius(15)
+                        .padding(.vertical)
+                    
 //                    location
                     NavigationLink (destination: locationScreen(Q3equipment: $Q3equipment, location: $location, showEntryLocation: $showEntryLocation)) {
                         Text("Location")
@@ -65,7 +78,6 @@ struct ContentView: View {
                         .background(Color.yellow)
                         .cornerRadius(15)
                         .padding(.vertical)
-                    Spacer()
 //                    advert
                     VStack {
                         Text("Pinnacle Solutions")
@@ -79,11 +91,13 @@ struct ContentView: View {
                             .font(.headline)
                             .colorInvert()
                     }
-                    .frame(width: 300, height: 100, alignment: .center)
+                    .frame(width: 350, height: 85, alignment: .center)
                         .background(Color.secondary)
                         .cornerRadius(15)
                         .padding()
+                    
                 }
+                Spacer()
             }
         }
     }
