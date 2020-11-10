@@ -33,9 +33,9 @@ struct teamScreen: View {
                                    Text("")}
                            }
                        }
-                .padding()
-                .background(Color.yellow)
-                .cornerRadius(15)
+                        .padding()
+                        .background(Color.yellow)
+                        .cornerRadius(15)
                 Spacer()
                 teamResults(Q3equipment: $Q3equipment, showEntry: $showEntryTeam, team: $team)
                }
