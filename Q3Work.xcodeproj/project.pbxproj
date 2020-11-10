@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4F0470D02485232800FEAF11 /* eQuipV1.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F0470CF2485232800FEAF11 /* eQuipV1.json */; };
+		4F3D0806255A80BE003C0BFF /* eQuipV1.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F3D0805255A80BE003C0BFF /* eQuipV1.json */; };
 		4F4F673C2471AB5100FB7029 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F4F673B2471AB5100FB7029 /* Default-568h@2x.png */; };
 		4FA5E5442486DEBB0051E234 /* modelScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA5E5432486DEBB0051E234 /* modelScreen.swift */; };
 		4FA5E5462486DFC60051E234 /* modelResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA5E5452486DFC60051E234 /* modelResults.swift */; };
@@ -31,7 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4F0470CF2485232800FEAF11 /* eQuipV1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = eQuipV1.json; sourceTree = "<group>"; };
+		4F3D0805255A80BE003C0BFF /* eQuipV1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = eQuipV1.json; sourceTree = "<group>"; };
 		4F4F673B2471AB5100FB7029 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		4FA5E5432486DEBB0051E234 /* modelScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modelScreen.swift; sourceTree = "<group>"; };
 		4FA5E5452486DFC60051E234 /* modelResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modelResults.swift; sourceTree = "<group>"; };
@@ -87,7 +87,7 @@
 		4FF16A4C24644D8900EA0340 /* Q3Work */ = {
 			isa = PBXGroup;
 			children = (
-				4F0470CF2485232800FEAF11 /* eQuipV1.json */,
+				4F3D0805255A80BE003C0BFF /* eQuipV1.json */,
 				4FF16A4D24644D8900EA0340 /* AppDelegate.swift */,
 				4FF16A4F24644D8900EA0340 /* SceneDelegate.swift */,
 				4FF16A5424644D8900EA0340 /* ContentView.swift */,
@@ -182,7 +182,7 @@
 				4FF16A5A24644D8B00EA0340 /* Preview Assets.xcassets in Resources */,
 				4FF16A5724644D8B00EA0340 /* Assets.xcassets in Resources */,
 				4F4F673C2471AB5100FB7029 /* Default-568h@2x.png in Resources */,
-				4F0470D02485232800FEAF11 /* eQuipV1.json in Resources */,
+				4F3D0806255A80BE003C0BFF /* eQuipV1.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
